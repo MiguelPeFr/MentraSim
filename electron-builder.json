@@ -1,0 +1,21 @@
+{
+  "appId": "com.mentra.mentrasim",
+  "productName": "MentraSim",
+  "directories": {
+    "output": "dist"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "node_modules/**/*"
+  ],
+  "mac": {
+    "category": "public.app-category.developer-tools"
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "linux": {
+    "target": "AppImage"
+  }
+}
