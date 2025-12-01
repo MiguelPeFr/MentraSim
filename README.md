@@ -28,27 +28,27 @@ This will start:
 
 ## Usage
 
-- **Abrir conexión**: La ventana de control se abre en `#/connect`. Introduce la URL del WebSocket y tu JWT.
-- **Panel de control**: Ve a `#/control` para simular movimiento de cabeza y botones.
-- **HUD**: La ventana principal `#/` muestra los layouts recibidos.
-- **Sin servidor**: Usa el botón “Cargar HUD de ejemplo” en el panel de control para ver un layout de prueba cuando veas “No layout received”.
+- Connection: open `#/connect`, enter your WebSocket URL and JWT.
+- Control Panel: go to `#/control` to simulate head movement and button presses.
+- HUD: the main window `#/` renders layouts received from the server.
+- No server: use “Load demo HUD” in the control panel to render a sample layout when you see “No layout received”.
 
-### Push Layout desde el panel
-- En `#/control`, usa el panel "Push Layout" para enviar layouts al Mock Cloud:
-- Botones rápidos: `Recorder`, `Translation`, `Camera`.
-- Personalizado: pega un JSON `HUDLayout` y pulsa `Enviar JSON`.
-- Endpoint configurable: por defecto `http://localhost:8787/broadcast/layout`.
+### Push Layout from the panel
+- In `#/control`, use the "Push Layout" panel to send layouts to the local Mock Cloud:
+- Quick buttons: `Recorder`, `Translation`, `Camera`.
+- Custom: paste a `HUDLayout` JSON and click `Send JSON`.
+- Configurable endpoint: defaults to `http://localhost:8787/broadcast/layout`.
 
-### Paso a paso (MentraOS Cloud)
-- Configura `WebSocket URL`: `wss://<tu-cloud>/glasses-ws`
-- Pega tu `JWT` de la Developer Console
-- Pulsa `Connect` y espera estado `authenticated`
-- Lanza tu AppServer de MentraOS; cuando llame a `session.layouts.*`, verás el layout en el HUD
+### Step-by-step (MentraOS Cloud)
+- Set `WebSocket URL`: `wss://<your-cloud>/glasses-ws`
+- Paste your `JWT` from the Developer Console
+- Click `Connect` and wait for `authenticated`
+- Run your MentraOS AppServer; when it calls `session.layouts.*`, the HUD will render the layout
 
-### Paso a paso (sin Cloud, demo)
-- Abre la ventana de control `#/control`
-- Pulsa “Cargar HUD de ejemplo” para renderizar un layout local
-- Ajusta sliders de cabeza y prueba botones para validar la UI
+### Step-by-step (no Cloud, demo)
+- Open the control panel `#/control`
+- Click “Load demo HUD” to render a local layout
+- Adjust head sliders and try buttons to validate the UI
 
 ## Architecture
 
